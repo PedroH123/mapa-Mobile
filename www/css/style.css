@@ -1,2 +1,51 @@
-/**/
+/*cor de fundo da tela*/
 
+body{
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+}
+
+.container{
+  position: fixed;
+  background-color: white;
+  width: 85%;
+  height: 80vh;
+  top: 13vh;
+  left: 4vh;
+  border-radius: 30px;
+  padding: 0;
+
+}
+
+h1{
+  font-family: Elephant;
+  font-size: 40px;
+}
+
+button{
+  margin-top: 30px;
+  width: 80%;
+  height: 15vh;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 25px;
+  font-family: Elephant;
+}
+
+.mapa{
+  position: fixed;
+  background-color: cyan;
+  width: 70%;
+  margin-left: 7%;
+  height: 50vh;
+  top: 40vh;
+  left: 4vh;
+  border-radius: 30px;
+  padding: 0;
+
+}
