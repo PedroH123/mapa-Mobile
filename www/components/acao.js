@@ -1,29 +1,26 @@
 
-var latitude;
-var longitude;
+var latitudeMapa;
+var longitudeMapa;
+
+
+
+
 $(document).on("click","#botao",function(){
 
+var onSuccess = function(position) {
+        
+   latitudeMapa = position.coords.latitude;
+      longitudeMapa = position.coords.longitude;
 
-//Checar Conexão
-function onOnline() {
-    var networkState = navigator.connection.type;
-    if (networkState != Connection.NONE) {
-         
-//Checar localização
-      var onSuccess = function(position) {
-          longitude = position.coords.longitude  ;      
-            latitude =  position.coords.altitude ;     
-    };
-
-
-
-
-    }
-    else{
-      alert("Falha na Conexão");
-    }
 }
 
-//Exibir mapa
+L.mapquest.key = 'L5uNebDw5eIcMwk8rloaFJalKhpKMIeJ';
+
+// 'map' refers to a <div> element with the ID map
+L.mapquest.map('map', {
+  center: [37.7749, -122.4194],
+  layers: L.mapquest.tileLayer('map'),
+  zoom: 12
+});
 
 })
